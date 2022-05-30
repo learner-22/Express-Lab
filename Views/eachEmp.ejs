@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= pageTitle %> </title>
+</head>
+<body>
+    <h1> <%= pageHeader %> </h1>
+
+    <% links.map(endPoints =>{ %>
+        <a href = "<%= endPoints.link %> "> Click here for <%= endPoints.name %>  </a> <br>
+    <% }) %>
+    <hr>
+           <h4> ID :  <%= data.id %></h4>
+           <h4> Name : <%=data.name %></h4>
+           <h4>UseName : <%=data.username %></h4>
+           <h4>Email : <%=data.email %></h4> 
+           <h4>Phone : <%=data.phone %></h4>
+           <h4>Website : <%=data.website %></h4>
+           <h4> Address : <%=data.address.suite %> ,<%=data.address.street %>, <%=data.address.city %>, <%=data.address.zipcode %>.  </h4> 
+           <h5> Geo -- lat : <%=data.address.geo.lat %> , lng : <%=data.address.geo.lng %>  </h5>
+
+
+           <h4>Company Name : <%=data.company.name %> </h4>
+           <h4>Company catchPhrase :  <%= data.company.catchPhrase %></h4>
+           <h4>Company BS :  <%= data.company.bs %></h4>
+</body>
+</html>
